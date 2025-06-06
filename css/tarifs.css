@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(93, 100, 182);
+}
+.tarifs{
+    max-width: 800px;
+    width: 100%;
+    margin: 50px auto;
+}
+h2 {
+    text-align: center;
+    color: #ffffff;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+th, td {
+    border: 3px solid #7d125b;
+    padding: 20px;
+    background-color: #fff;
+}
+th {
+    background-color: #871ba4;
+    color: white;
+}
+.note {
+    font-style: italic;
+    margin-top: 20px;
+}

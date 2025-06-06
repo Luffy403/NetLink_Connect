@@ -1,0 +1,105 @@
+/*сброс стилей*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+/*стили для шапки*/
+header{
+    padding: 20px;
+    background: linear-gradient(to right, #372698, #210f88, #4f31bc);
+}
+header .navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    max-width: 300px;
+    width: 100%;
+}
+.logo h1{
+    font-size: 25px;
+    color: #fff;
+}
+.logo img{
+    max-width: 70px;
+    width: 100%;
+    height: 50px;
+}
+header ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    list-style-type: none;
+}
+header ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 23px;
+    transition: all 0.7s ease;
+}
+header ul li a:hover{
+    transform: scale(1.15);
+}
+.search_container input{
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+.search_container button{
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1d154a;
+    color: #fff;
+}
+/*стили для подвала*/
+footer{
+    padding: 40px;
+    background: linear-gradient(to right, #1d154a, #210f88, #4f31bc);
+    text-align: center;
+}
+footer span{
+    font-size: 22px;
+    color: #fff;
+}
+/*Мобильная адаптация под 768px*/
+@media(max-width: 768px){
+    .navbar{
+        gap: 15px;
+    }
+    .logo{
+        max-width: 300px;
+        width: 100%;
+    }
+    .logo h1{
+        font-size: 23px;
+        color: #fff;
+    }
+    .logo img{
+        max-width: 50px;
+        width: 100%;
+        height: 40px;
+    }
+    header ul{
+        gap: 15px;
+        justify-content: center;
+    }
+    header ul li a{
+        font-size: 19px;
+    }
+
+    footer span{
+    font-size: 20px;
+}   
+}

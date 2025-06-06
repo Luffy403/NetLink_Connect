@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Устанавливаем кодировку документа -->
+    <meta charset="UTF-8">
+    <!-- Настройки для адаптивного дизайна -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Стили -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/registr.css">
+    <!-- Заголовок страницы -->
+    <title>Регистрация</title>
+</head>
+<body>
+    <!--Шапка сайта-->
+    <header>
+        <nav class="navbar">
+            <!-- Контейнер с логотипом -->
+            <div class="logo">
+                <img src="img/Логотип1.png" alt="Логотип">
+                <h1>NetLink Connect</h1>
+            </div>
+            <!-- Список со страницами -->
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="tarifs.html">Тарифы</a></li>
+                <li><a href="connection.html">Подключение</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="about_us.html">О компании</a></li>
+            </ul>
+            <!-- Контейнер с поиском -->
+            <div class="search_container">
+                <input type="text" name="search" placeholder="поиск">
+                <button>Найти</button>
+            </div>
+        </nav>
+    </header>
+    <!-- Основной контент на сайте -->
+    <main>
+        <!-- 1 секция -->
+        <section class="registration">
+            <h2>Регистрация</h2>
+            <!-- Форма -->
+            <form>
+                <!-- Первый инпут -->
+                <label for="input1">Почта</label>
+                <input type="text" name="email" id="input1" autocomplete="on | off" placeholder="email" required>
+                <!-- Второй инпут -->
+                <label for="input2">Логин</label>
+                <input type="text" name="login" id="input2" autocomplete="on" placeholder="login" required>
+                <!-- Третий инпут -->
+                <label for="input3">Пароль</label>
+                <input type="text" name="password" id="input3" autocomplete="on" placeholder="password" required>
+                <!-- Четвёртый инпут -->
+                <label for="input4">Повторите пароль</label>
+                <input type="text" name="repeat_pass" id="input4" autocomplete="on | off" placeholder="repeat password" required>
+                <!-- Контейнер с чекбоксом -->
+                <div class="chek">
+                    <input type="checkbox" id="check1"> 
+                    <label for="check1">Я согласен на обработку данных</label>
+                </div>
+                <!-- Кнопка регистрации -->
+                <input type="submit" value="Зарегистрироваться">
+            </form>
+        </section>
+    </main>
+    <!-- Подвал сайта -->
+    <footer>
+        <span>© 2025 NetLink Connect. Все права защищены.</span>
+    </footer>
+</body>
+</html>

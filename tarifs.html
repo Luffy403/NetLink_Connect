@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Устанавливаем кодировку документа -->
+    <meta charset="UTF-8">
+    <!-- Настройки для адаптивного дизайна -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Стили -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/tarifs.css">
+    <!-- Скрипт для вк -->
+    <script src="https://vk.com/js/api/openapi.js?169" type="text/javascript"></script>
+    <!-- Заголовок страницы -->
+    <title>Тарифы</title>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <nav class="navbar">
+            <!-- Контейнер с логотипом -->
+            <div class="logo">
+                <img src="img/Логотип1.png" alt="Логотип">
+                <h1>NetLink Connect</h1>
+            </div>
+            <!-- Список со страницами -->
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="registr.html">Регистрация</a></li>
+                <li><a href="connection.html">Подключение</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="about_us.html">О компании</a></li>
+            </ul>
+            <!-- Контейнер с поиском -->
+            <div class="search_container">
+                <input type="text" name="search" placeholder="поиск">
+                <button>Найти</button>
+            </div>
+        </nav>
+    </header>
+    <!-- Основной контент сайта -->
+    <main>
+        <!-- 1 секция -->
+        <section class="tarifs">
+            <h2>Наши тарифы</h2>
+            <!-- Таблица с тарифами -->
+            <table>
+                <!-- Шапка таблицы-->
+                <thead>
+                    <!-- Строка с заголовками -->
+                    <tr>
+                        <th>Категория</th>
+                        <th>Название тарифа</th>
+                        <th>Скорость</th>
+                        <th>Цена</th>
+                    </tr>
+                </thead>
+                <!-- Контент таблицы -->
+                <tbody>
+                    <!-- Первая строка -->
+                    <tr class="category">
+                        <td rowspan="3">Домашний интернет</td>
+                        <td>Стандарт</td>
+                        <td>100 Мбит/с</td>
+                        <td>499₽/мес</td>
+                    </tr>
+                    <!-- Вторая строка -->
+                    <tr>
+                        <td>Премиум</td>
+                        <td>300 Мбит/с</td>
+                        <td>799₽/мес</td>
+                    </tr>
+                    <!-- Третья строка -->
+                    <tr>
+                        <td>Ультра</td>
+                        <td>1 Гбит/с</td>
+                        <td>1299₽/мес</td>
+                    </tr>
+                    <!-- Четвёртая строка -->
+                    <tr class="category">
+                        <td rowspan="2">Бизнес-решения</td>
+                        <td>Бизнес Старт</td>
+                        <td>200 Мбит/с + статический IP</td>
+                        <td>1499₽/мес</td>
+                    </tr>
+                    <!-- Пятая строка -->
+                    <tr>
+                        <td>Бизнес Про</td>
+                        <td>500 Мбит/с + защита DDoS</td>
+                        <td>2999₽/мес</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Скрипт вк -->
+            <div id="vk_like"></div>
+            <script type="text/javascript">
+                VK.init({
+                apiId: 7794785,
+                onlyWidgets: true
+                });
+                VK.Widgets.Like("vk_like", {type: "button"});
+            </script>
+        </section>
+    </main>
+    <!-- Подвал сайта -->
+    <footer>
+        <span>© 2025 NetLink Connect. Все права защищены.</span>
+    </footer>
+</body>
+</html>
