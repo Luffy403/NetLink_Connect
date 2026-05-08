@@ -1,0 +1,341 @@
+/*сброс стилей*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+/* Шаблоны */
+.container {
+  max-width: 1500px;
+  width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+@media (max-width: 1600px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+@media (max-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    max-width: 900px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    max-width: 350px;
+  }
+}
+
+
+.section {
+  padding-top: 60px;
+}
+.section:last-child {
+  padding-bottom: 60px;
+}
+@media (max-width: 1600px) {
+  .section {
+    padding-top: 50px;
+  }
+  .section:last-child {
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 1400px) {
+  .section {
+    padding-top: 40px;
+  }
+  .section:last-child {
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 1024px) {
+  .section {
+    padding-top: 30px;
+  }
+  .section:last-child {
+    padding-bottom: 30px;
+  }
+}
+
+.section__title {
+  font-size: 35px;
+  color: #000728;
+}
+@media (max-width: 1600px) {
+  .section__title {
+    font-size: 30px;
+  }
+}
+@media (max-width: 1024px) {
+  .section__title {
+    font-size: 25px;
+  }
+}
+
+body {
+  min-height: 100vh;           /* минимальная высота = весь экран */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;      /* центрируем по вертикали */
+  background: linear-gradient(to bottom, #9257ff, #a491ff, #755bf3);
+}
+
+/* Контентная часть занимает всё доступное место */
+main {
+  flex: 1;                      /* растягивается */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;      /* центрируем внутренний контент */
+}
+
+/*стили для шапки*/
+.header {
+  padding: 20px;
+  background: linear-gradient(to right, #372698, #210f88, #4f31bc);
+}
+@media (max-width: 1024px) {
+  .header {
+    padding: 15px;
+  }
+}
+
+.header__container {
+  max-width: 1600px;
+}
+@media (max-width: 1600px) {
+  .header__container {
+    max-width: 1400px;
+  }
+}
+@media (max-width: 1400px) {
+  .header__container {
+    max-width: 1300px;
+  }
+}
+@media (max-width: 1024px) {
+  .header__container {
+    max-width: 1000px;
+  }
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.logo {
+  max-width: 70px;
+  width: 100%;
+  height: 50px;
+}
+@media (max-width: 1400px) {
+  .logo {
+    max-width: 60px;
+    height: 45px;
+  }
+}
+
+.navbar__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style-type: none;
+}
+@media (max-width: 1600px) {
+  .navbar__list {
+    gap: 20px;
+  }
+}
+@media (max-width: 1400px) {
+  .navbar__list {
+    gap: 15px;
+  }
+}
+
+/* Кнопка-бургер: скрыта на больших экранах */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 100;
+}
+
+/* Три полоски бургера */
+.burger-menu span {
+  width: 28px;
+  height: 3px;
+  background-color: #fff; /* белый цвет, как у ссылок в шапке */
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Бургер */
+@media (max-width: 1024px) {
+  /* Показываем бургер-меню */
+  .burger-menu {
+    display: flex;
+  }
+  /* Переопределяем navbar для мобильной версии */
+  .navbar {
+    position: relative;
+  }
+  /* Скрываем обычное меню, делаем его выпадающим */
+  .navbar__list {
+    display: none; /* скрыто по умолчанию */
+    position: absolute;
+    top: 60px; /* отступ от верха (под шапку) */
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0; /* убираем отступы между пунктами, добавим через padding */
+    background: linear-gradient(to right, #1d154a, #210f88, #4f31bc);
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    z-index: 99;
+    padding: 0;
+    transition: all 0.3s ease;
+  }
+  /* Когда меню активно — показываем dropdown */
+  .navbar__list.active {
+    display: flex;
+  }
+  /* Стили для пунктов меню в выпадающем списке */
+  .navbar__list li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .navbar__list li:last-child {
+    border-bottom: none;
+  }
+  .navbar__item {
+    display: block;
+    padding: 15px 20px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+  }
+  .navbar__item:hover {
+    transform: none; /* убираем scale на мобилках */
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  /* Поиск на мобилках можно оставить, но он может сжиматься */
+  .search__container {
+    gap: 5px;
+  }
+  .search__container-input {
+    padding: 8px;
+    font-size: 14px;
+    width: 120px;
+  }
+  .search__container-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  /* Анимация бургера в крестик при открытом меню */
+  .burger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 6px);
+  }
+  .burger-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .burger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -5px);
+  }
+}
+
+.navbar__item {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  transition: all 0.4s ease;
+}
+@media (max-width: 1400px) {
+  .navbar__item {
+    font-size: 18px;
+  }
+}
+
+.navbar__item:hover {
+  transform: scale(1.05);
+}
+.search__container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search__container-input {
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid #fff;
+}
+@media (max-width: 1400px) {
+  .search__container-input {
+    padding: 8px;
+    border-radius: 7px;
+  }
+}
+
+.search__container-input:focus {
+  border: 3px solid #0e005c;
+}
+.search__container-input::placeholder {
+  font-size: 15px;
+}
+
+.search__container-btn {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #1d154a;
+  color: #fff;
+  font-size: 15px;
+}
+@media (max-width: 1400px) {
+  .search__container-btn {
+    padding: 8px;
+    border-radius: 7px;
+  }
+}
+
+/*стили для подвала*/
+.footer {
+  padding: 40px;
+  background: linear-gradient(to right, #1d154a, #210f88, #4f31bc);
+  text-align: center;
+}
+@media (max-width: 1600px) {
+  .footer {
+    padding: 30px;
+  }
+}
+
+.footer__text {
+  font-size: 20px;
+  color: #fff;
+}
+@media (max-width: 490px) {
+  .footer__text {
+    font-size: 15px;
+  }
+}

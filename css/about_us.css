@@ -1,29 +1,30 @@
-body{
-    background-color: rgb(93, 100, 182);
-}
-
-.about {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 40px 20px;
+.about__container{
+    max-width: 1000px;
     text-align: center;
 }
+@media (max-width: 1024px) {
+    .about__container{
+        max-width: 700px;
+    }
+} 
+@media (max-width: 768px) {
+    .about__container{
+        max-width: 500px;
+    }
+} 
 
-.about h2 {
-    color: #871ba4;
+.about__title{
     margin-bottom: 30px;
-    font-size: 30px;
 }
-
 .about_content p{
-    text-align: left;
+    text-align: center;
     color: #fff;
     font-size: 23px;
 }
 .advantages {
     background: #f5f5f5;
-    padding: 20px;
-    border-radius: 8px;
+    padding: 25px;
+    border-radius: 15px;
     margin-top: 30px;
     text-align: left;
 }

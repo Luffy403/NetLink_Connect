@@ -1,83 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <!-- Устанавливаем кодировку документа -->
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <!-- Настройки для адаптивного дизайна -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Стили -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="shortcut icon" href="img/Логотип.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/contacts.css" />
     <!-- Заголовок страницы -->
     <title>Контакты</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Шапка сайта -->
-    <header>
+    <header class="header">
+      <div class="container header__container">
         <nav class="navbar">
-            <!-- Контейнер с логотипом -->
-            <div class="logo">
-                <img src="img/Логотип1.png" alt="Логотип">
-                <h1>NetLink Connect</h1>
-            </div>
-            <!-- Список со страницами -->
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="tarifs.html">Тарифы</a></li>
-                <li><a href="registr.html">Регистрация</a></li>
-                <li><a href="connection.html">Подключение</a></li>
-                <li><a href="about_us.html">О компании</a></li>
-            </ul>
-            <!-- Контейнер с поиском -->
-            <div class="search_container">
-                <input type="text" name="search" placeholder="поиск">
-                <button>Найти</button>
-            </div>
+          <!-- Логотип -->
+          <img src="img/Логотип.png" class="logo" alt="Логотип" />
+          <!-- Кнопка-бургер (появляется на экранах <=1024px) -->
+          <!-- Список со страницами -->
+          <ul class="navbar__list" id="navbarList">
+            <li><a class="navbar__item" href="index.html">Главная</a></li>
+            <li><a class="navbar__item" href="tarifs.html">Тарифы</a></li>
+            <li><a class="navbar__item" href="registr.html">Регистрация</a></li>
+            <li>
+              <a class="navbar__item" href="connection.html">Подключение</a>
+            </li>
+            <li><a class="navbar__item" href="contacts.html">Контакты</a></li>
+            <li><a class="navbar__item" href="about_us.html">О компании</a></li>
+          </ul>
+
+          <!-- Контейнер с поиском -->
+          <div class="search__container">
+            <input
+              class="search__container-input"
+              type="text"
+              name="search"
+              placeholder="поиск"
+            />
+            <button class="search__container-btn">Найти</button>
+          </div>
+          <!-- Бургер -->
+          <div class="burger-menu" id="burgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </nav>
+      </div>
     </header>
     <!-- Основной контент -->
-    <main>
-        <!-- 1 секция -->
-        <section class="contacts">
-            <!-- Текст в контейнере -->
-            <h2>Свяжитесь с нами</h2>
-            <p class="subtitle">Мы всегда рады помочь! Выберите удобный способ связи:</p>
-            <!-- Контейнер с карточками -->
-            <div class="contact_cards">
-                <!-- Первая карточка -->
-                <div class="contact_card">
-                    <div class="contact_icon">📞</div>
-                    <h3>Телефон</h3>
-                    <p>8 (800) 123-45-67</p>
-                    <p class="small">(Бесплатно по России)</p>
-                </div>
-                <!-- Вторая карточка -->
-                <div class="contact_card">
-                    <div class="contact_icon">✉️</div>
-                    <h3>Email</h3>
-                    <p><a href="mailto:support@netlinkconnect.ru">support@netlinkconnect.ru</a></p>
-                    <p class="small">Ответ в течение 1 часа</p>
-                </div>
-                <!-- Третья карточка -->
-                <div class="contact_card">
-                    <div class="contact_icon">📍</div>
-                    <h3>Офис</h3>
-                    <p>г. Москва, ул. Технологическая, 15</p>
-                    <p class="small">БЦ "ТехноПарк", 3 этаж</p>
-                </div>
-                <!-- Четвёртая карточка -->
-                <div class="contact_card">
-                    <div class="contact_icon">⏰</div>
-                    <h3>График работы</h3>
-                    <p>Пн-Пт: 9:00–20:00</p>
-                    <p>Сб-Вс: 10:00–18:00</p>
-                </div>
+    <main class="main">
+      <!-- 1 секция -->
+      <section class="section contacts">
+        <div class="container contacts__container">
+          <!-- Текст в контейнере -->
+          <h1 class="section__title">Свяжитесь с нами</h1>
+          <p class="subtitle">
+            Мы всегда рады помочь! Выберите удобный способ связи:
+          </p>
+          <!-- Контейнер с карточками -->
+          <div class="contact_cards">
+            <!-- Первая карточка -->
+            <div class="contact_card">
+              <div class="contact_icon">📞</div>
+              <h3>Телефон</h3>
+              <p>8 (800) 123-45-67</p>
+              <p class="small">(Бесплатно по России)</p>
             </div>
-        </section>
+            <!-- Вторая карточка -->
+            <div class="contact_card">
+              <div class="contact_icon">✉️</div>
+              <h3>Email</h3>
+              <p>
+                <a href="mailto:support@netlinkconnect.ru"
+                  >support@netlinkconnect.ru</a
+                >
+              </p>
+              <p class="small">Ответ в течение 1 часа</p>
+            </div>
+            <!-- Третья карточка -->
+            <div class="contact_card">
+              <div class="contact_icon">📍</div>
+              <h3>Офис</h3>
+              <p>г. Москва, ул. Технологическая, 15</p>
+              <p class="small">БЦ "ТехноПарк", 3 этаж</p>
+            </div>
+            <!-- Четвёртая карточка -->
+            <div class="contact_card">
+              <div class="contact_icon">⏰</div>
+              <h3>График работы</h3>
+              <p>Пн-Пт: 9:00–20:00</p>
+              <p>Сб-Вс: 10:00–18:00</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- Подвал сайта -->
-    <footer>
-        <span>© 2025 NetLink Connect. Все права защищены.</span>
+    <footer class="footer">
+      <span class="footer__text"
+        >© 2025 NetLink Connect. Все права защищены.</span
+      >
     </footer>
-</body>
+    <script src="js/dropdown.js"></script>
+  </body>
 </html>

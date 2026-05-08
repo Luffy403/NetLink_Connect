@@ -1,83 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <!-- Устанавливаем кодировку документа -->
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <!-- Настройки для адаптивного дизайна -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Стили -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/about_us.css">
+    <link rel="shortcut icon" href="img/Логотип.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/about_us.css" />
     <!-- Заголовок страницы -->
     <title>О компании</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Шапка сайта -->
-    <header>
+    <header class="header">
+      <div class="container header__container">
         <nav class="navbar">
-            <!-- Контейнер с логотипом -->
-            <div class="logo">
-                <img src="img/Логотип1.png" alt="Логотип">
-                <h1>NetLink Connect</h1>
-            </div>
-            <!-- Список со страницами -->
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="tarifs.html">Тарифы</a></li>
-                <li><a href="registr.html">Регистрация</a></li>
-                <li><a href="connection.html">Подключение</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-            <!-- Контейнер с поиском -->
-            <div class="search_container">
-                <input type="text" name="search" placeholder="поиск">
-                <button>Найти</button>
-            </div>
+          <!-- Логотип -->
+          <img src="img/Логотип.png" class="logo" alt="Логотип" />
+          <!-- Кнопка-бургер (появляется на экранах <=1024px) -->
+          <!-- Список со страницами -->
+          <ul class="navbar__list" id="navbarList">
+            <li><a class="navbar__item" href="index.html">Главная</a></li>
+            <li><a class="navbar__item" href="tarifs.html">Тарифы</a></li>
+            <li><a class="navbar__item" href="registr.html">Регистрация</a></li>
+            <li>
+              <a class="navbar__item" href="connection.html">Подключение</a>
+            </li>
+            <li><a class="navbar__item" href="contacts.html">Контакты</a></li>
+            <li><a class="navbar__item" href="about_us.html">О компании</a></li>
+          </ul>
+
+          <!-- Контейнер с поиском -->
+          <div class="search__container">
+            <input
+              class="search__container-input"
+              type="text"
+              name="search"
+              placeholder="поиск"
+            />
+            <button class="search__container-btn">Найти</button>
+          </div>
+          <!-- Бургер -->
+          <div class="burger-menu" id="burgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </nav>
+      </div>
     </header>
     <!-- Основной контент на сайте -->
-    <main>
-        <!-- 1 секция -->
-        <section class="about">
-            <h2>NetLink Connect – ваш надежный провайдер</h2>
-            <!-- Текст секции -->
-            <div class="about_content">
-                <p>
-                    Мы работаем с 2015 года, обеспечивая стабильный и быстрый интернет для тысяч клиентов. 
-                    Наша сеть охватывает 50+ городов, а команда экспертов всегда готова помочь.
-                </p>
-                <div class="advantages">
-                    <h3>Наши преимущества:</h3>
-                    <ul>
-                        <li>Собственная оптоволоконная сеть</li>
-                        <li>Честные условия без скрытых платежей</li>
-                        <li>Техподдержка 24/7</li>
-                    </ul>
-                </div>
+    <main class="main">
+      <!-- 1 секция -->
+      <section class="section about">
+        <div class="container about__container">
+          <h1 class="section__title about__title">
+            NetLink Connect – ваш надежный провайдер
+          </h1>
+          <!-- Текст секции -->
+          <div class="about_content">
+            <p>
+              Мы работаем с 2015 года, обеспечивая стабильный и быстрый интернет
+              для тысяч клиентов. Наша сеть охватывает 50+ городов, а команда
+              экспертов всегда готова помочь.
+            </p>
+            <div class="advantages">
+              <h3>Наши преимущества:</h3>
+              <ul>
+                <li>Собственная оптоволоконная сеть</li>
+                <li>Честные условия без скрытых платежей</li>
+                <li>Техподдержка 24/7</li>
+              </ul>
             </div>
-            <!-- Статистика -->
-            <div class="stats">
-                <!-- Первый блок статистики -->
-                <div class="item">
-                    <span>8</span>
-                    <p>лет на рынке</p>
-                </div>
-                <!-- Второй блок статистики -->
-                <div class="item">
-                    <span>50+</span>
-                    <p>городов покрытия</p>
-                </div>
-                <!-- Третий блок статистики -->
-                <div class="item">
-                    <span>24/7</span>
-                    <p>поддержка</p>
-                </div>
+          </div>
+          <!-- Статистика -->
+          <div class="stats">
+            <!-- Первый блок статистики -->
+            <div class="item">
+              <span>8</span>
+              <p>лет на рынке</p>
             </div>
-        </section>
+            <!-- Второй блок статистики -->
+            <div class="item">
+              <span>50+</span>
+              <p>городов покрытия</p>
+            </div>
+            <!-- Третий блок статистики -->
+            <div class="item">
+              <span>24/7</span>
+              <p>поддержка</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- Подвал сайта -->
-    <footer>
-        <span>© 2025 NetLink Connect. Все права защищены.</span>
+    <footer class="footer">
+      <span class="footer__text"
+        >© 2025 NetLink Connect. Все права защищены.</span
+      >
     </footer>
-</body>
+    <script src="js/dropdown.js"></script>
+  </body>
 </html>
